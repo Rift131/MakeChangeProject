@@ -1,9 +1,11 @@
 package com.skilldistillery.makechange;
 
+import java.util.Scanner;
+
 public class MakeChange {
 	
 	// global scanner
-	
+	static Scanner userInput = new Scanner(System.in);
 	// global formatDecimal
 
 	public static void main(String[] args) {
@@ -214,11 +216,9 @@ public class MakeChange {
 	
 		// sysout a question to ask user if they would like to do another MakeChange request or QUIT
 	
-		//sysout same series of asterisks (user readability)
+		// sysout same series of asterisks (user readability)
 	
-		// save user response to a string var
-	
-		
+		// save user response to a string var		
 	
 		// switch
 	
