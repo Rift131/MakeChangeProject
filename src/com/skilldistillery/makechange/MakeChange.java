@@ -9,7 +9,7 @@ public class MakeChange {
 	
 	// global scanner
 	static Scanner userInput = new Scanner(System.in);
-	// global decimal formate
+	// global decimal format
 	static DecimalFormat moneyFormat = new DecimalFormat("$#,###0.00");
 	
 	public static void main(String[] args) {
@@ -332,6 +332,12 @@ public class MakeChange {
 		case "exit":
 			// return; (sends program back to main for the thank you sysout and ends the program)
 			return;
+		// default
+		default:
+			// sysout unrecognized entry, please start over
+			System.out.println("Unrecognized entry. ");
+			// invoke the customerPurchaseRequest method 
+			optionToQuitOrContinue();
 		}
 	}
 	
