@@ -2,6 +2,6 @@
 
 ## Description
 
-## Techonologies Used
+## Technologies Used
 
 ## What I Learned
