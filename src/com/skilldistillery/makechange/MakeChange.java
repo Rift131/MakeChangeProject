@@ -70,19 +70,13 @@ public class MakeChange {
 	
 	// method: remainingBalance(double tendered, double owed)
 	public static void remainingDebt(BigDecimal customerMoneyGiven, BigDecimal priceOfGoods, BigDecimal remainingBalanceOwed) {
-//		//set parameters to variables for conversion to DecimalFormat
-//		BigDecimal tendered = BigDecimal.valueOf(customerMoneyGiven);
-//		
-//		// set variables to parameters to DecimalFormat
-//		DecimalFormat moneyFormat.format(customerMoneyGiven);
-//		DecimalFormat totalBill = priceOfGoods;
-//		Decimal
+		
 		// (prompt a message indicating amount tendered, total price of goods and how much more is needed to zero out the balance (delta var * -1 to print a positive number for better readability). This is twofold: the message allows the user to verify they entered data correctly or tell the customer how much more money to provide to satisfy the debt.
 		// also create BigDecimal for -1
 		BigDecimal negOne = BigDecimal.valueOf(-1);
-		System.out.println("\nAfter receiving $" + customerMoneyGiven + " for a debt of $" + priceOfGoods + ", the remaining balance is $" + (remainingBalanceOwed.multiply(negOne)) +".");
+		System.out.println("\nAfter receiving " + moneyFormat.format(customerMoneyGiven) + " for a debt of " + moneyFormat.format(priceOfGoods) + ", the remaining balance is " + (moneyFormat.format(remainingBalanceOwed.multiply(negOne))) +".");
 		// ask if the customer is able to pay enough
-		System.out.println("\nVerify inputs above & if correct, request remaining balance: $" + (remainingBalanceOwed.multiply(negOne)) + ". \nIf these values ARE NOT correct, submit amounts again by entering \"Retry\" or \"r\".\nIf the customer can provide the remaining balance, enter \"Yes\" or \"y\".\nOtherwise, enter \"No\" or \"n\".");
+		System.out.println("\nVerify inputs above & if they are correct, request remaining balance: " + (moneyFormat.format(remainingBalanceOwed.multiply(negOne))) + ". \nIf these values ARE NOT correct, submit amounts again by entering \"Retry\" or \"r\".\nIf the customer can provide the remaining balance, enter \"Yes\" or \"y\".\nOtherwise, enter \"No\" or \"n\".");
 		// assign response to a String
 		String debtPromptResponse = userInput.next();
 		// clear the scanner
